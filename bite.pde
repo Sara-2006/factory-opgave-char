@@ -12,6 +12,7 @@ void draw() {
     text(0, 50, 100);
   }
 }
+
 boolean bitMine() {
   if (random(0, 2)>1) {
     return true;
@@ -22,7 +23,10 @@ boolean bitMine() {
 byte makeByte() {
   byte b=0;
   for (int i=0; i<8; i++) {
-    b=(byte) (b+pow(2, i));
+    // du kan ikke løse opgaven hvis ikke du ved hvad en byte er og hvorfor du har en funktion bitMine()
+    // din løkke kører 8 gange. En gang for hver bit der er i en byte.
+    // Hvis svaret fra bitMine() er sand - beregn så bit'ens værdi. 
+    //b=(byte) (b+pow(2, i)); Læs opgaven! Du skal læse om pow() i processings dokumentation  
   }
   return b;
 }
